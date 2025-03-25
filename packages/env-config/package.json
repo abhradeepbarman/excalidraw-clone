@@ -1,0 +1,23 @@
+{
+  "name": "@repo/env-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/node": "^22.13.10",
+    "@repo/typescript-config": "workspace:*"
+  },
+  "exports": {
+    "./config": "./src/config.ts"
+  }
+}
