@@ -8,4 +8,6 @@ const schema = {
 }
 
 const client = postgres(config.DB_URL);
-export const db = drizzle({ client, schema, logger: true });
+const db = drizzle({ client, schema, logger: true });
+
+export default db;

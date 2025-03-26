@@ -1,11 +1,15 @@
 import express from "express";
-import config from "@repo/env-config/config"
+import config from "@repo/env-config/config";
+import authRoutes from "./routes/auth.routes";
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("Hello from http-backend!");
-});
+// middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// routes
+app.use("/auth", authRoutes);
 
 const PORT = config.PORT;
 app.listen(PORT, () => {
