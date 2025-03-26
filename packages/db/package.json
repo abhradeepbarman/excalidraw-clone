@@ -1,0 +1,21 @@
+{
+  "name": "@repo/db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "drizzle-orm": "^0.41.0",
+    "postgres": "^3.4.5",
+    "@repo/env-config": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "drizzle-kit": "^0.30.5"
+  }
+}
