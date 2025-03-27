@@ -8,9 +8,9 @@
         "build": "tsc"
     },
     "devDependencies": {
-        "@repo/backend": "workspace:*",
         "@repo/db": "workspace:*",
         "@repo/typescript-config": "workspace:*",
+        "@repo/common": "workspace:*",
         "@types/dotenv": "^8.2.3",
         "@types/express": "^5.0.1",
         "@types/jsonwebtoken": "^9.0.9",

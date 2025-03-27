@@ -1,10 +1,10 @@
-import { registerSchema } from "@repo/backend/zod/register.schema";
 import { NextFunction, Request, Response } from "express";
 import db from "@repo/db";
 import { eq } from "drizzle-orm";
 import { users } from "@repo/db/schema";
 import jwt from "jsonwebtoken";
 import config from "@repo/env-config/config";
+import { registerSchema } from "@repo/common/schema";
 
 export const register = async (
     req: Request,

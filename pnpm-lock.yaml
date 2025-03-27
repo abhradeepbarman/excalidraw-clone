@@ -36,9 +36,9 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
     devDependencies:
-      '@repo/backend':
+      '@repo/common':
         specifier: workspace:*
-        version: link:../../packages/backend
+        version: link:../../packages/common
       '@repo/db':
         specifier: workspace:*
         version: link:../../packages/db
@@ -123,11 +123,15 @@ importers:
         specifier: ^5.8.2
         version: 5.8.2
 
-  packages/backend:
+  packages/common:
     dependencies:
       zod:
         specifier: ^3.24.2
         version: 3.24.2
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/db:
     dependencies:
