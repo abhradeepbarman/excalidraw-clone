@@ -8,6 +8,27 @@
       "when": 1742961283273,
       "tag": "0000_noisy_deadpool",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1743096584800,
+      "tag": "0001_motionless_taskmaster",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1743097835600,
+      "tag": "0002_early_miek",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1743100971126,
+      "tag": "0003_powerful_thunderbolt",
+      "breakpoints": true
     }
   ]
 }

@@ -1,33 +1,23 @@
 import config from "@repo/env-config/config";
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
+import asyncHandler from "../utils/asyncHandler";
+import CustomErrorHandler from "../utils/CustomErrorHandler";
 
-export function auth(req: any, res: Response, next: NextFunction) {
-    try {
-        const token = req.headers.authorization?.split(" ")[1];
-
-        if (!token) {
-            return res.status(401).json({
-                status: false,
-                message: "Unauthorized",
-            });
+export const auth = asyncHandler(
+    async (req: any, res: Response, next: NextFunction) => {
+        const authHeader = req.headers.authorization;
+        if (!authHeader) {
+            next(CustomErrorHandler.unAuthorized("Unauthorized Access"));
         }
 
-        const decoded = jwt.verify(token, config.JWT_SECRET);
+        const token = authHeader?.split(" ")[1];
 
-        if (!decoded) {
-            return res.status(401).json({
-                status: false,
-                message: "Unauthorized",
-            });
+        const user = jwt.verify(token!, config.JWT_SECRET);
+        if (!user) {
+            next(CustomErrorHandler.unAuthorized("Unauthorized Access"));
         }
-
-        req.user = decoded;
+        req.user = user;
         next();
-    } catch (error) {
-        return res.status(401).json({
-            status: false,
-            message: "Unauthorized",
-        });
     }
-}
+);

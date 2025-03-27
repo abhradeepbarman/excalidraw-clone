@@ -8,9 +8,9 @@
         "build": "tsc"
     },
     "devDependencies": {
+        "@repo/common": "workspace:*",
         "@repo/db": "workspace:*",
         "@repo/typescript-config": "workspace:*",
-        "@repo/common": "workspace:*",
         "@types/dotenv": "^8.2.3",
         "@types/express": "^5.0.1",
         "@types/jsonwebtoken": "^9.0.9",
@@ -23,9 +23,11 @@
     "description": "",
     "dependencies": {
         "@repo/env-config": "workspace:*",
+        "bcryptjs": "^3.0.2",
         "dotenv": "^16.4.7",
         "drizzle-orm": "^0.41.0",
         "express": "^4.21.2",
-        "jsonwebtoken": "^9.0.2"
+        "jsonwebtoken": "^9.0.2",
+        "zod": "^3.24.2"
     }
 }

@@ -3,19 +3,21 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "generate": "npx drizzle-kit generate",
+        "migrate": "npx drizzle-kit migrate"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "@repo/env-config": "workspace:*",
         "drizzle-orm": "^0.41.0",
-        "postgres": "^3.4.5",
-        "@repo/env-config": "workspace:*"
+        "postgres": "^3.4.5"
     },
     "devDependencies": {
         "@types/dotenv": "^8.2.3",
+        "@types/node": "^22.13.14",
         "drizzle-kit": "^0.30.5"
     },
     "exports": {
